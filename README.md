@@ -10,10 +10,15 @@ elements.csv is from FPL API.
 To reproduce instead of download, simply use the following script:
 
 `import json
+
 import requests
+
 import pandas as pd
+
 d=json.loads(requests.get('https://fantasy.premierleague.com/api/bootstrap-static/').text)
+
 df=pd.json_normalize(d['elements'])
+
 df.to_csv('C:/Users/nath1/Documents/CS/105/project/dreamteam/' + 'elements' + '.csv')`
 
 ## Output
