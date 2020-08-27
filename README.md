@@ -9,7 +9,8 @@ elements.csv is from FPL API.
 
 To reproduce instead of download, simply use the following script:
 
-`import json
+```python
+import json
 
 import requests
 
@@ -19,7 +20,8 @@ d=json.loads(requests.get('https://fantasy.premierleague.com/api/bootstrap-stati
 
 df=pd.json_normalize(d['elements'])
 
-df.to_csv('C:/Users/nath1/Documents/CS/105/project/dreamteam/' + 'elements' + '.csv')`
+df.to_csv('C:/Users/nath1/Documents/CS/105/project/dreamteam/' + 'elements' + '.csv')
+```
 
 ## Output
 Outputs dreamteam.csv with players, cost, total points last season and other relevant player features. This team will be within the FPL game constraints outlined in the program.
